@@ -43,3 +43,22 @@ document.getElementById("copy-icon").addEventListener("click", () => {
     console.error("Erro ao copiar texto: ", err);
   });
 });
+
+// Alternar tema
+const themeToggle = document.getElementById('theme-toggle');
+const htmlElement = document.documentElement; // Seleciona o <html>
+
+// Função para alternar o tema
+themeToggle.addEventListener('click', () => {
+  // Verifica o tema atual
+  const currentTheme = htmlElement.getAttribute('data-theme');
+
+  // Alterna entre claro e escuro
+  if (currentTheme === 'dark') {
+    htmlElement.setAttribute('data-theme', 'light');
+    themeToggle.innerHTML = '<i class="bi bi-sun"></i>'; // Ícone de Sol para tema claro
+  } else {
+    htmlElement.setAttribute('data-theme', 'dark');
+    themeToggle.innerHTML = '<i class="bi bi-moon"></i>'; // Ícone de Lua para tema escuro
+  }
+});
