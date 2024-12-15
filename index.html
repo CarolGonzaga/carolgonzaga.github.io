@@ -1,61 +1,630 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio da Dev Front-End Carol Gonzaga com intuito de compartilhar projetos e experiências.">
-    
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="./assets/images/favicon/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfólio da Dev Front-End Carol Gonzaga com intuito de compartilhar projetos e experiências." />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/styles.css">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/images/favicon/favicon.ico" type="image/x-icon" />
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/styles.css" />
 
-    <!-- Fonte -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
-    <title>Carol Gonzaga | Portfolio</title>
+  <!-- Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+    rel="stylesheet" />
+
+  <title>Carol Gonzaga | Portfolio</title>
 </head>
+
 <body>
-    <header class="header">
-        <div class="header__brand">
-            <img class="brand__logo" src="./assets/images/logo.png" alt="Logo CG">
+  <header>
+    <div class="header__top">
+      <div class="top__left">
+        <div class="left__mail">
+          <span class="mail__text">dev.carolgonzaga@gmail.com</span>
+          <span class="mail__icon" id="copy-icon"><i class="bi bi-copy"></i></span>
         </div>
-        <i id="toggleTheme" class="bi bi-sun"></i>
-    </header>
-    <nav>
-        <ul class="menu menu--mobile">
-            <li class="menu__item">
-                <a class="menu__link active" href="#home">
-                    <i class="menu__icon bi bi-house-door"></i>
-                    <span class="menu__text">Home</span>
-                </a>
-            </li>
-            <li class="menu__item">
-                <a class="menu__link" href="#projetos">
-                    <i class="menu__icon bi bi-window-stack"></i>
-                    <span class="menu__text">Projetos</span>
-                </a>
-            </li>
-            <li class="menu__item">
-                <a class="menu__link" href="#sobre">
-                    <i class="menu__icon bi bi-person"></i>
-                    <span class="menu__text">Sobre</span>
-                </a>
-            </li>
-            <li class="menu__item">
-                <a class="menu__link" href="#contato">
-                    <i class="menu__icon bi bi-envelope"></i>
-                    <span class="menu__text">Contato</span>
-                </a>
-            </li>
+
+        <div class="left__cv">
+          <a href="./assets/doc/cv-ana-caroline-completo.pdf"><span class="cv__text">cv</span></a>
+        </div>
+
+        <div class="left__theme">
+          <a class="mail__icon" href="./assets/doc/cv-ana-caroline-completo.pdf"><i class="bi bi-sun"></i></a>
+        </div>
+      </div>
+
+      <nav class="nav--principal">
+        <ul class="principal__menu">
+          <li class="menu__item">
+            <a class="menu__link active" href="#">
+              <span class="menu__text">Home</span>
+            </a>
+          </li>
+          <li class="menu__item">
+            <span class="menu__text">/</span>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#projetos">
+              <span class="menu__text">Projetos</span>
+            </a>
+          </li>
+          <li class="menu__item">
+            <span class="menu__text">/</span>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#sobre">
+              <span class="menu__text">Sobre</span>
+            </a>
+          </li>
         </ul>
-    </nav>
-    <h1>Carol Gonzaga</h1>
+      </nav>
+
+      <nav class="nav--mobile">
+        <ul class="mobile__menu">
+          <li class="menu__item">
+            <a class="menu__link active" href="#">
+              <i class="menu__icon bi bi-house-door"></i>
+              <span class="menu__text">Home</span>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#projetos">
+              <i class="menu__icon bi bi-window-stack"></i>
+              <span class="menu__text">Projetos</span>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#sobre">
+              <i class="menu__icon bi bi-person"></i>
+              <span class="menu__text">Sobre</span>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">
+              <i class="menu__icon bi bi-envelope"></i>
+              <span class="menu__text">Contato</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="header__bottom">
+      <div class="bottom__img">
+        <div class="img__avatar">
+          <img class="avatar" src="./assets/images/avatar.png" alt="Carol Gonzaga" />
+        </div>
+        
+        <p class="img__name">Carol Gonzaga ✌🏻</p>
+        
+        <ul class="contact__icons">
+          <a href="https://github.com/CarolGonzaga" target="_blank">
+            <li><i class="bi bi-github"></i></li>
+          </a>
+          <a href="https://www.linkedin.com/in/anacquesta/" target="_blank">
+            <li><i class="bi bi-linkedin"></i></i></i></li>
+          </a>
+          <a href="https://www.instagram.com/anacquesta/" target="_blank">
+            <li><i class="bi bi-instagram"></i></i></li>
+          </a>
+        </ul>
+      </div>
+
+      <div class="bottom__title gradient">
+        <p class="tittle__text">
+          Soluções Criativas & Desenvolvimento Front-end
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <section class="skills">
+    <ul class="carousel">
+      <li class="carousel__item">
+        <img class="carousel__img" src="./assets/images/skills/html.svg" alt="Html Logo" title="HTML" />
+      </li>
+      <li class="carousel__item">
+        <img class="carousel__img" src="./assets/images/skills/css.svg" alt="Css Logo" title="CSS" />
+      </li>
+      <li class="carousel__item">
+        <img class="carousel__img" src="./assets/images/skills/js.svg" alt="JavaScript Logo" title="JavaScript" />
+      </li>
+      <li class="carousel__item">
+        <img class="carousel__img" src="./assets/images/skills/typescript.svg" alt="TypeScript Logo"
+          title="TypeScript" />
+      </li>
+      <li class="carousel__item">
+        <img class="carousel__img" src="./assets/images/skills/react.svg" alt="React Logo" title="React" />
+      </li>
+      <li class="carousel__item">
+        <img class="carousel__img" src="./assets/images/skills/vue.svg" alt="Vue Logo" title="Vue" />
+      </li>
+      <li class="carousel__item">
+        <img class="carousel__img" src="./assets/images/skills/nodejs.svg" alt="NodeJS Logo" title="NodeJS" />
+      </li>
+      <li class="carousel__item">
+        <img class="carousel__img" src="./assets/images/skills/google-cloud.svg" alt="Google Cloud Logo"
+          title="Google Cloud" />
+      </li>
+    </ul>
+    <h2 id="projetos">Projetos</h2>
+  </section>
+
+  <section class="projects">
+    <ul class="projects__list">
+      <li class="list__item">
+        <div class="item__details">
+          <img class="item__img" src="./assets/images/projects/detona-ralph.jpg" alt="Projeto 1" />
+
+          <div class="item__tittle">
+            <span>Projeto 1</span> 
+            <h3>Jogo Detona Ralph</h3>
+          </div>
+
+          <p class="item__subtitle">
+            Um jogo baseado no filme Detona Ralph, onde o objetivo é acertar o
+            Ralph na janela que ele aparecer.
+          </p>
+
+          <div class="item__functionality">
+            <div class="navigation">
+              <button class="arrow arrow-left"><i class="bi bi-caret-left-fill"></i></button>
+              <div class="functionality active">
+                <p>Redução de vida: A cada erro ao clicar na janela errada, a vida do jogador é reduzida.</p>
+              </div>
+              <div class="functionality">
+                <p>Nível de dificuldade: O jogador pode escolher entre três níveis de dificuldade (Easy, Normal, Hard),
+                  que alteram a velocidade do movimento do Ralph.</p>
+              </div>
+              <div class="functionality">
+                <p>Pontuação: O jogo registra a pontuação do jogador e exibe a melhor pontuação ao final do jogo.</p>
+              </div>
+              <div class="functionality">
+                <p>Reinício do jogo: O jogador pode reiniciar o jogo após o término.</p>
+              </div>
+              <button class="arrow arrow-right"><i class="bi bi-caret-right-fill"></i></button>
+            </div>
+          </div>
+
+          <ul class="item__technologies">
+            <li>
+              <i class="bi bi-filetype-html technologies__icon" title="Html"></i>
+            </li>
+            <li>
+              <i class="bi bi-filetype-css technologies__icon" title="Css"></i>
+            </li>
+            <li>
+              <i class="bi bi-filetype-js technologies__icon" title="JavaScript"></i>
+            </li>
+          </ul>
+        </div>
+
+        <div class="item__links">
+          <a class="link__preview" href="https://carolgonzaga.github.io/desafio-detona-ralph/"
+            target="_blank">prévia</a>
+          <a class="link__repository" href="https://github.com/CarolGonzaga/desafio-detona-ralph"
+            target="_blank">repositório</a>
+        </div>
+      </li>
+
+      <li class="list__item">
+        <div class="item__details">
+          <img class="item__img" src="./assets/images/projects/jogo-da-memoria.jpg" alt="Projeto 2" />
+
+          <div class="item__tittle">
+            <span>Projeto 2</span> 
+            <h3>Jogo da Memória</h3>
+          </div>
+
+          <p class="item__subtitle">
+            Um jogo da memória divertido com emojis temáticos de Halloween, onde o objetivo é encontrar todos os pares.
+          </p>
+
+          <div class="item__functionality">
+            <div class="navigation">
+              <button class="arrow arrow-left"><i class="bi bi-caret-left-fill"></i></button>
+              <div class="functionality active">
+                <p>Feedback visual: As cartas abertas mostram o emoji correspondente, e as cartas combinadas ficam
+                  viradas.</p>
+              </div>
+              <div class="functionality">
+                <p>Reconhecimento de vitória: Uma mensagem é exibida ao jogador ao finalizar o jogo.</p>
+              </div>
+              <div class="functionality">
+                <p>Feedback sonoro: Sons para acertos e vitória, melhorando a imersão do jogador.</p>
+              </div>
+              <div class="functionality">
+                <p>Embaralhamento das cartas: Cada partida começa com uma ordem aleatória de cartas, garantindo
+                  re-jogabilidade.</p>
+              </div>
+              <button class="arrow arrow-right"><i class="bi bi-caret-right-fill"></i></button>
+            </div>
+          </div>
+
+          <ul class="item__technologies">
+            <li>
+              <i class="bi bi-filetype-html technologies__icon" title="Html"></i>
+            </li>
+            <li>
+              <i class="bi bi-filetype-css technologies__icon" title="Css"></i>
+            </li>
+            <li>
+              <i class="bi bi-filetype-js technologies__icon" title="JavaScript"></i>
+            </li>
+            <li>
+              <i class="bi bi-database technologies__icon" title="API Rest"></i>
+            </li>
+          </ul>
+        </div>
+
+        <div class="item__links">
+          <a class="link__preview" href="https://carolgonzaga.github.io/desafio-jogo-da-memoria/"
+            target="_blank">prévia</a>
+          <a class="link__repository" href="https://github.com/CarolGonzaga/desafio-jogo-da-memoria"
+            target="_blank">repositório</a>
+        </div>
+      </li>
+
+      <li class="list__item">
+        <div class="item__details">
+          <img class="item__img" src="./assets/images/projects/pokedex.jpg" alt="Projeto 3" />
+
+          <div class="item__tittle">
+            <span>Projeto 3</span> 
+            <h3>Pokedex</h3>
+          </div>
+          <p class="item__subtitle">
+            Uma aplicação interativa que exibe informações sobre diferentes tipos de Pokémon, utilizando dados obtidos
+            diretamente da PokeAPI.
+          </p>
+
+          <div class="item__functionality">
+            <div class="navigation">
+              <button class="arrow arrow-left"><i class="bi bi-caret-left-fill"></i></button>
+              <div class="functionality active">
+                <p>Busca na PokeAPI: Os dados dos Pokémon, como nome, número, tipos e imagem, são carregados
+                  dinamicamente a partir da PokeAPI.</p>
+              </div>
+              <div class="functionality">
+                <p>Filtro por tipo de Pokémon: O usuário pode selecionar um tipo específico (ex.: Fogo, Água, Grama)
+                  para visualizar apenas os Pokémon correspondentes.</p>
+              </div>
+              <div class="functionality">
+                <p>Exibição de informações: Mostra detalhes como nome, número e tipos de cada Pokémon.</p>
+              </div>
+              <div class="functionality">
+                <p>Ordenação dinâmica: A lista de Pokémon é gerada dinamicamente a partir dos dados disponíveis.</p>
+              </div>
+              <button class="arrow arrow-right"><i class="bi bi-caret-right-fill"></i></button>
+            </div>
+          </div>
+
+          <ul class="item__technologies">
+            <li>
+              <i class="bi bi-filetype-html technologies__icon" title="Html"></i>
+            </li>
+            <li>
+              <i class="bi bi-filetype-css technologies__icon" title="Css"></i>
+            </li>
+            <li>
+              <i class="bi bi-filetype-js technologies__icon" title="JavaScript"></i>
+            </li>
+          </ul>
+        </div>
+
+        <div class="item__links">
+          <a class="link__preview" href="https://carolgonzaga.github.io/desafio-dio-pokedex/" target="_blank">prévia</a>
+          <a class="link__repository" href="https://github.com/CarolGonzaga/desafio-dio-pokedex"
+            target="_blank">repositório</a>
+        </div>
+      </li>
+
+      <li class="list__item">
+        <div class="item__details">
+          <img class="item__img" src="./assets/images/projects/jokenpo.jpg" alt="Projeto 4" />
+
+          <div class="item__tittle">
+            <span>Projeto 4</span> 
+            <h3>Jokenpô YuGiOh</h3>
+          </div>
+
+          <p class="item__subtitle">
+            Uma aplicação interativa de batalha de cartas inspirada em Yu-Gi-Oh!, com regras simples baseadas no
+            clássico Pedra, Papel e Tesoura (Jokenpô).
+          </p>
+
+          <div class="item__functionality">
+            <div class="navigation">
+              <button class="arrow arrow-left"><i class="bi bi-caret-left-fill"></i></button>
+              <div class="functionality active">
+                <p>Sistema de duelo: Os jogadores selecionam cartas e competem, com base nos atributos "Pedra", "Papel"
+                  e "Tesoura".</p>
+              </div>
+              <div class="functionality">
+                <p>Interface dinâmica: As cartas são geradas aleatoriamente e exibidas com imagens, nomes e atributos.
+                </p>
+              </div>
+              <div class="functionality">
+                <p>Sistema de pontuação: O placar é atualizado em tempo real para refletir as vitórias e derrotas.</p>
+              </div>
+              <div class="functionality">
+                <p>Feedback visual e sonoro: Animações e sons indicam os resultados das batalhas.</p>
+              </div>
+              <button class="arrow arrow-right"><i class="bi bi-caret-right-fill"></i></button>
+            </div>
+          </div>
+
+          <ul class="item__technologies">
+            <li>
+              <i class="bi bi-filetype-html technologies__icon" title="Html"></i>
+            </li>
+            <li>
+              <i class="bi bi-filetype-css technologies__icon" title="Css"></i>
+            </li>
+            <li>
+              <i class="bi bi-filetype-js technologies__icon" title="JavaScript"></i>
+            </li>
+          </ul>
+        </div>
+
+        <div class="item__links">
+          <a class="link__preview" href="https://carolgonzaga.github.io/desafio-dio-yugioh/" target="_blank">prévia</a>
+          <a class="link__repository" href="https://github.com/CarolGonzaga/desafio-dio-yugioh"
+            target="_blank">repositório</a>
+        </div>
+      </li>
+
+      <li class="list__item">
+        <div class="item__details">
+          <img class="item__img" src="./assets/images/projects/controladora-midi.jpg" alt="Projeto 5" />
+
+          <div class="item__tittle">
+            <span>Projeto 5</span> 
+            <h3>Controladora MIDI</h3>
+          </div>
+
+          <p class="item__subtitle">
+            Uma aplicação interativa que simula um teclado musical virtual, com suporte a sons MIDI e interação via
+            teclado físico e/ou mouse.
+          </p>
+
+          <div class="item__functionality">
+            <div class="navigation">
+              <button class="arrow arrow-left"><i class="bi bi-caret-left-fill"></i></button>
+              <div class="functionality active">
+                <p>Atalhos de teclado e notas: Um botão exibe ou esconde os atalhos das teclas e as notas
+                  correspondentes.</p>
+              </div>
+              <div class="functionality">
+                <p>Configuração de volume: Controle de volume diretamente na interface.</p>
+              </div>
+              <div class="functionality">
+                <p>Feedback visual: As teclas são destacadas ao serem pressionadas, oferecendo uma experiência visual
+                  intuitiva.</p>
+              </div>
+              <div class="functionality">
+                <p>Teclado virtual interativo: Teclas que emitem sons ao serem clicadas ou acionadas pelo teclado
+                  físico.</p>
+              </div>
+              <button class="arrow arrow-right"><i class="bi bi-caret-right-fill"></i></button>
+            </div>
+          </div>
+
+          <ul class="item__technologies">
+            <li>
+              <i class="bi bi-filetype-html technologies__icon" title="Html"></i>
+            </li>
+            <li>
+              <i class="bi bi-filetype-css technologies__icon" title="Css"></i>
+            </li>
+            <li>
+              <i class="bi bi-filetype-js technologies__icon" title="JavaScript"></i>
+            </li>
+          </ul>
+        </div>
+
+        <div class="item__links">
+          <a class="link__preview" href="https://carolgonzaga.github.io/desafio-dio-teclado-musical/"
+            target="_blank">prévia</a>
+          <a class="link__repository" href="https://github.com/CarolGonzaga/desafio-dio-teclado-musical"
+            target="_blank">repositório</a>
+        </div>
+      </li>
+
+      <li class="list__item">
+        <div class="item__details">
+          <img class="item__img" src="./assets/images/projects/mundo-invertido.jpg" alt="Projeto 6" />
+
+          <div class="item__tittle">
+            <span>Projeto 6</span> 
+            <h3>Mundo Invertido</h3>
+          </div>
+
+          <p class="item__subtitle">
+            Projeto desenvolvido como parte do curso Front-end da DIO, com o objetivo de consolidar os conhecimentos em
+            HTML, CSS e JavaScript.
+          </p>
+
+          <div class="item__functionality">
+            <div class="navigation">
+              <button class="arrow arrow-left"><i class="bi bi-caret-left-fill"></i></button>
+              <div class="functionality active">
+                <p>Um design interativo com troca de tema (modo claro e escuro).</p>
+              </div>
+              <div class="functionality">
+                <p>Uma narrativa envolvente que convida os usuários a explorar o Mundo Invertido.</p>
+              </div>
+              <div class="functionality">
+                <p>Elementos visuais dinâmicos e estilizados, com foco em imersão e interação.</p>
+              </div>
+              <div class="functionality">
+                <p>Formulário de cadastro do usuário.</p>
+              </div>
+              <button class="arrow arrow-right"><i class="bi bi-caret-right-fill"></i></button>
+            </div>
+          </div>
+
+          <ul class="item__technologies">
+            <li>
+              <i class="bi bi-filetype-html technologies__icon" title="Html"></i>
+            </li>
+            <li>
+              <i class="bi bi-filetype-css technologies__icon" title="Css"></i>
+            </li>
+            <li>
+              <i class="bi bi-filetype-js technologies__icon" title="JavaScript"></i>
+            </li>
+          </ul>
+        </div>
+
+        <div class="item__links">
+          <a class="link__preview" href="https://carolgonzaga.github.io/desafio-dio-mundo-invertido/"
+            target="_blank">prévia</a>
+          <a class="link__repository" href="https://github.com/CarolGonzaga/desafio-dio-mundo-invertido"
+            target="_blank">repositório</a>
+        </div>
+      </li>
+
+      <li class="list__item">
+        <div class="item__details">
+          <img class="item__img" src="./assets/images/projects/spiderman.jpg" alt="Projeto 7" />
+
+          <div class="item__tittle">
+            <span>Projeto 7</span> 
+            <h3>Spider-Man Multiverso</h3>
+          </div>
+
+          <p class="item__subtitle">
+            Uma aplicação interativa que apresenta uma galeria com informações e mídia sobre os filmes do Spider-Man.
+          </p>
+
+          <div class="item__functionality">
+            <div class="navigation">
+              <button class="arrow arrow-left"><i class="bi bi-caret-left-fill"></i></button>
+              <div class="functionality active">
+                <p>Galeria interativa de imagens: Ao clicar em uma imagem, ela é ampliada para exibição em tamanho real,
+                  com transição suave.</p>
+              </div>
+              <div class="functionality">
+                <p>Design responsivo: A galeria se adapta a diferentes tamanhos de tela, garantindo uma boa experiência
+                  tanto em dispositivos móveis quanto em desktops.</p>
+              </div>
+              <button class="arrow arrow-right"><i class="bi bi-caret-right-fill"></i></button>
+            </div>
+          </div>
+
+          <ul class="item__technologies">
+            <li>
+              <i class="bi bi-filetype-html technologies__icon" title="Html"></i>
+            </li>
+            <li>
+              <i class="bi bi-filetype-css technologies__icon" title="Css"></i>
+            </li>
+            <li>
+              <i class="bi bi-filetype-js technologies__icon" title="JavaScript"></i>
+            </li>
+          </ul>
+        </div>
+
+        <div class="item__links">
+          <a class="link__preview" href="https://carolgonzaga.github.io/desafio-dio-spider-man/"
+            target="_blank">prévia</a>
+          <a class="link__repository" href="https://github.com/CarolGonzaga/desafio-dio-spider-man"
+            target="_blank">repositório</a>
+        </div>
+      </li>
+
+
+
+  </section>
+
+  <section class="about-me">
+    <h2 id="sobre">Sobre Mim</h2>
+    <div class="about-me__container">
+      <div class="about-me__avatar">
+        <img src="./assets/images/avatar2.png" alt="">
+      </div>
+      
+      <div class="about-me__info">
+        <div>
+          <h3>Ana Caroline Gonzaga</h3>
+          <h4>Desenvolvedora Front End</h4>
+          <p>Com mais de 13 anos de experiência como empreendedora, desenvolvi habilidades essenciais de comunicação, trabalho em equipe e resolução de problemas. Minha jornada empreendedora me proporcionou uma base sólida em soft skills, como flexibilidade, resiliência e capacidade de adaptação.</p>
+        </div>
+        <div>
+          <h3>Idiomas</h3>
+          <p>Português: Nativo</p>
+          <p>Inglês: Intermediário</p>
+        </div>
+        <div>
+          <h3>Formação</h3>
+          <h4>Centro Universitário Senac</h4>
+          <p>Bacharelado | 2022 - 2024</p>
+          <p>Sistemas para Internet</p>
+        </div>
+      </div>
+
+      <div class="about-me__xp">
+        <div>
+          <h3>Experiência</h3>
+          <h4>2023 - ATUAL | FREELANCER</h4>
+          <p>Desenvolvedora Front End</p>
+          <ul>
+            <li>
+              <p>Configuração e gerenciamento de dependências do projeto para garantir
+              um ambiente de desenvolvimento estável e consistente.</p>
+            </li>
+            <li>
+              <p>Desenvolvimento de interfaces de usuário interativas e responsivas.</p>
+            </li>
+            <li>
+              <p>Organização dos arquivos do projeto em uma estrutura lógica.</p>
+            </li>
+            <li>
+              <p>Documentação do código e das funcionalidades. Implantação da aplicação
+                em ambiente de produção.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>2017 - 2023 | LIMA LIMÃO BABY STORE LTDA</h4>
+          <p>Sócia Proprietária</p>
+          <ul>
+            <li>
+              <p>Informática, TI, Telecomunicações - E-commerce (Diretor)</p>
+            </li>
+            <li>
+              <p>Responsável por todos os processos da loja, desde o controle de pedidos e emissão de
+                notas fiscais até o gerenciamento do site e das redes sociais.
+                </p>
+            </li>
+            <li>
+              <p>Gerenciamento integral do site e loja virtual, controle de estoque, vendas, publicidade e
+                propaganda, definição de preços e atendimento ao cliente.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a class="link_top" href="#"><i class="bi bi-arrow-up-circle"></i></a>
+    <footer>
+      <p class="footer__text">Copyright© 2024 <span>Carol Gonzaga</span> - Direitos Reservados.</p>
+    </footer>
+  </section>
+
+  <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
