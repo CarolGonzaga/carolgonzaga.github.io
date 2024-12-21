@@ -111,6 +111,7 @@ header {
     padding: .5rem .7rem;
     background-color: var(--color-white);
     border-radius: 100%;
+    cursor: pointer;
 }
 
 .mail__icon:before {
@@ -725,8 +726,6 @@ footer {
         color: var(--color-black);
     }
 
-
-
     .skills {
         margin-top: -50px;
         padding: 100px 20px 100px 20px;
@@ -741,8 +740,6 @@ footer {
     .carousel__img {
         height: 30px;
     }
-
-
 
     .about-me {
         margin-top: -50px;
