@@ -97,6 +97,10 @@ header {
     gap: .6rem;
 }
 
+.left__mail {
+    position: relative;
+}
+
 .mail__text {
     font-size: .7rem;
     margin-left: 1rem;
@@ -107,6 +111,41 @@ header {
     padding: .5rem .7rem;
     background-color: var(--color-white);
     border-radius: 100%;
+}
+
+.mail__icon:before {
+    content: "Copiado!";
+    position: absolute;
+    top: -21px;
+    left: 70%;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 5px;
+    border-radius: 20px;
+    font-size: .6rem;
+    display: none;
+}
+
+.mail__icon:after {
+    content: "";
+    position: absolute;
+    top: -6px;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    background-color: var(--color-black);
+    display: none;
+}
+
+.mail__icon:active {
+    background-color: var(--color-grey);
+    color: var(--color-white);
+}
+
+.mail__icon.active:before,
+.mail__icon.active:after {
+    display: block;
 }
 
 .cv__text {

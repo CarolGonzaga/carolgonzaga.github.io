@@ -1,5 +1,7 @@
 // Seleciona todos os elementos 'item__functionality'
-const functionalitiesContainers = document.querySelectorAll(".item__functionality");
+const functionalitiesContainers = document.querySelectorAll(
+  ".item__functionality"
+);
 
 functionalitiesContainers.forEach((container) => {
   const functionalities = container.querySelectorAll(".functionality");
@@ -19,7 +21,8 @@ functionalitiesContainers.forEach((container) => {
 
   // Evento para ir ao item anterior
   arrowLeft.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + functionalities.length) % functionalities.length;
+    currentIndex =
+      (currentIndex - 1 + functionalities.length) % functionalities.length;
     updateActiveItem(currentIndex);
   });
 
@@ -36,29 +39,36 @@ document.getElementById("copy-icon").addEventListener("click", () => {
   const textToCopy = document.querySelector(".mail__text").textContent;
 
   // Copia o texto para a área de transferência
-  navigator.clipboard.writeText(textToCopy).then(() => {
-    // Exibe uma mensagem de sucesso (opcional)
-    console.log("Texto copiado!");
-  }).catch((err) => {
-    console.error("Erro ao copiar texto: ", err);
-  });
+  navigator.clipboard
+    .writeText(textToCopy)
+    .then(() => {
+      // Exibe uma mensagem de sucesso (opcional)
+      let inputText = document.querySelector(".mail__icon");
+      inputText.classList.add("active");
+      setTimeout(function () {
+        inputText.classList.remove("active");
+      }, 2000);
+    })
+    .catch((err) => {
+      console.error("Erro ao copiar texto: ", err);
+    });
 });
 
 // Alternar tema
-const themeToggle = document.getElementById('theme-toggle');
+const themeToggle = document.getElementById("theme-toggle");
 const htmlElement = document.documentElement; // Seleciona o <html>
 
 // Função para alternar o tema
-themeToggle.addEventListener('click', () => {
+themeToggle.addEventListener("click", () => {
   // Verifica o tema atual
-  const currentTheme = htmlElement.getAttribute('data-theme');
+  const currentTheme = htmlElement.getAttribute("data-theme");
 
   // Alterna entre claro e escuro
-  if (currentTheme === 'dark') {
-    htmlElement.setAttribute('data-theme', 'light');
+  if (currentTheme === "dark") {
+    htmlElement.setAttribute("data-theme", "light");
     themeToggle.innerHTML = '<i class="bi bi-sun"></i>'; // Ícone de Sol para tema claro
   } else {
-    htmlElement.setAttribute('data-theme', 'dark');
+    htmlElement.setAttribute("data-theme", "dark");
     themeToggle.innerHTML = '<i class="bi bi-moon"></i>'; // Ícone de Lua para tema escuro
   }
 });
