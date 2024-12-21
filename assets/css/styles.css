@@ -303,21 +303,47 @@ header {
 }
 
 .carousel__item {
+    position: relative;
     background-color: var(--skills-color);
     border: 3px solid var(--primary-border-color);
     border-radius: 100%;
-    padding: 1.5rem 1.6rem;
+    padding: 1rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.carousel__img {
+    height: 40px;
+}
+
+.carousel__text {
+    position: absolute;
+    bottom: -35%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2.1rem;
+    padding: .5rem 2rem;
+    
+    background-color: var(--cor-gradient3);
+    color: var(--color-white);
+    border: 3px solid var(--color-white);
+    border-radius: 3rem;
+    font-size: .6rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.carousel__item:hover {
-    transform: scale(1.2);
-}
-
-.carousel__img {
-    height: 50px;
+.carousel__text:hover,
+.carousel__text:active {
+    font-size: .7rem;
 }
 
 .projects {
@@ -703,22 +729,17 @@ footer {
 
     .skills {
         margin-top: -50px;
-        padding: 100px 20px 70px 20px;
+        padding: 100px 20px 100px 20px;
         z-index: 3;
     }
 
     .carousel {
         padding: 0;
+        gap: 40px;
     }
 
     .carousel__item {
-        background-color: var(--skills-color);
-        border: 3px solid var(--primary-border-color);
-        border-radius: 100%;
-        padding: 1.2rem 1.3rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        
     }
     
     .carousel__img {
